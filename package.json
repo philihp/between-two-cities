@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "boardgame.io": "^0.31.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.4"
@@ -21,8 +22,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.13.0",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-flowtype": "^3.2.1",
