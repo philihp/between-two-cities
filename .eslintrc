@@ -1,7 +1,34 @@
 {
-  "extends": ["react-app", "plugin:unicorn/recommended"],
-  "plugins": ["prettier"],
+  "parser": "babel-eslint",
+  "extends": [
+    "react-app",
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:flowtype/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "plugins": ["prettier", "jest", "flowtype", "unicorn"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": "off"
   }
 }
