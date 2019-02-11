@@ -1,3 +1,1 @@
-export default {
-  clickCell: G => ({ ...G }),
-};
+export default {};

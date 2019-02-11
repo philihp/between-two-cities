@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "boardgame.io": "^0.31.1",
+    "prop-types": "^15.7.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.4"
@@ -15,12 +16,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint --fix src/**/*.js"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "devDependencies": {
     "babel-eslint": "^9.0.0",
     "eslint": "^5.12.0",
@@ -43,5 +38,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }
