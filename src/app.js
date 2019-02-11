@@ -2,6 +2,7 @@ import React from 'react';
 import { Client } from 'boardgame.io/react';
 import { Game } from 'boardgame.io/core';
 import setup from './model/setup';
+import playerView from './model/player-view';
 import moves from './update/moves';
 import board from './view/board';
 import './app.css';
@@ -16,6 +17,7 @@ const GameClient = Client({
   multiplayer: {
     local: true,
   },
+  playerView,
 });
 
 export default () => (

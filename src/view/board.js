@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import playerView from '../model/player-view';
 
 const Board = ({ G, ctx, isActive, isConnected, playerID }) => {
   return (
     <pre>
       {JSON.stringify(
         {
-          G,
+          G: playerView(G, ctx, playerID),
           ctx,
           isActive,
           isConnected,
@@ -26,7 +27,7 @@ Board.propTypes = {
   ctx: PropTypes.any.isRequired,
   isActive: PropTypes.bool.isRequired,
   isConnected: PropTypes.bool.isRequired,
-  playerID: PropTypes.number.isRequired,
+  playerID: PropTypes.string.isRequired,
 };
 
 export default Board;
