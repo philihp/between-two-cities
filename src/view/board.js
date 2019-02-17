@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import playerView from '../model/player-view';
+import Hand from './hand';
 
 const Board = ({ G, ctx, isActive, isConnected, playerID }) => {
+  const g = playerView(G, ctx, playerID);
   return (
-    <pre>
-      {JSON.stringify(
-        {
-          G: playerView(G, ctx, playerID),
-          ctx,
-          isActive,
-          isConnected,
-          playerID,
-        },
-        null,
-        2,
-      )}
-    </pre>
+    <div>
+      playerID: {playerID}
+      <br />
+      isActive: {isActive && 'YES'}
+      <br />
+      isConnected: {isConnected && 'YES'}
+      <br />
+      Singles: {g.singlesDeck.join(',')}
+      <br />
+      Doubles: {g.doublesDeck.join(',')}
+      <br />
+      Hand:
+      <Hand tiles={g.players[playerID].hand} />
+    </div>
   );
 };
 
