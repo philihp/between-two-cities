@@ -31,15 +31,28 @@ const tile = type => {
   }
 };
 
-const Tile = ({ type }) => (
+const onClick = (select, index) => {
+  console.log('created');
+  return () => {
+    console.log('triggered');
+    return select(index);
+  };
+};
+
+const Tile = ({ type, select, index }) => (
   <div style={{ display: 'inline-block' }}>
     {tile(type)}
     <br />
-    <button>select</button>
+    <button type="button" onClick={onClick(select, index)}>
+      select
+    </button>
   </div>
 );
+
 Tile.propTypes = {
   type: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+  select: PropTypes.func.isRequired,
 };
 
 export default Tile;
